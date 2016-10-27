@@ -59,7 +59,7 @@ let component: AddressListComponent;
 let fixture: ComponentFixture<AddressListComponent>;
 let mockDataService: FakeMockDataService;
 
-describe('Address list Component: ', () => {
+describe('AddressListComponent: ', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [

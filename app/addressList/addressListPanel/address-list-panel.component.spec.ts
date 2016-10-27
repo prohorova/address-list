@@ -27,7 +27,7 @@ let groups = [
 let component: AddressListPanelComponent;
 let fixture: ComponentFixture<AddressListPanelComponent>;
 
-describe('Address list Component: ', () => {
+describe('AddressListPanelComponent : ', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
