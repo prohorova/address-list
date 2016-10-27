@@ -13,7 +13,8 @@ import { MockDataService } from './mock-data.service';
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule
+    HttpModule,
+    RouterModule
   ],
   exports: [ AddressListComponent ],
   declarations: [

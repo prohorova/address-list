@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+//import { Router } from '@angular/router';
 
 import { Address } from '../../../address';
 
@@ -11,8 +12,11 @@ import { Address } from '../../../address';
 export class AddressEntryComponent {
   @Input() address: Address;
 
+  //constructor(private router: Router) {}
+
   selectAddress($event: any, addressId: string) {
     // redirect to address
+    // this.router.navigate(['/address-details', addressId]);
     $event.preventDefault();
   }
 }
