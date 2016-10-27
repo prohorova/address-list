@@ -1,0 +1,11 @@
+<div class="panel panel-white">
+  <div class="btn-group btn-group-justified" role="group" aria-label="...">
+    <div class="btn-group" role="group" *ngFor="let addressBook of addressBooks">
+      <button type="button" class="btn"
+              [ngClass]="{'btn-primary': isSelected(addressBook), 'btn-default': !isSelected(addressBook)}"
+              (click)="selectAddressBook(addressBook)">
+        {{addressBook}}
+      </button>
+    </div>
+  </div>
+</div>

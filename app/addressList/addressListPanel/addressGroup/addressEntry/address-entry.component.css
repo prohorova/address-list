@@ -1,0 +1,14 @@
+.address {
+  color: #333;
+  display: block;
+  padding: 5px 0;
+  text-decoration: none;
+}
+
+.address:hover {
+  background-color: #f9f9f9;
+}
+
+.lettericon {
+  display: inline-block;
+}

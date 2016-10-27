@@ -1,0 +1,8 @@
+<hr-address-book-selection-bar *ngIf="showSelectionBar()"
+                               [addressBooks]="addressBooks"
+                               (addressBookSelected)="addressBookSelected($event)">
+</hr-address-book-selection-bar>
+
+<hr-address-list-panel *ngIf="addresses"
+                       [groups]="groups">
+</hr-address-list-panel>

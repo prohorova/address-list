@@ -1,0 +1,11 @@
+<div>
+  <a href="#" class="address" (click)="selectAddress($event, address.addressId)">
+    <div class="lettericon"
+         [attr.data-text]="address.letter"
+         data-color="auto"
+         data-box="circle">
+      {{address.letter}}
+    </div>
+    {{address.name}}
+  </a>
+</div>
