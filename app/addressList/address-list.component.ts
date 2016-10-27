@@ -13,7 +13,7 @@ import { Group } from './group';
 })
 export class AddressListComponent implements OnInit {
 
-  private noAddressBookName = 'All';
+  noAddressBookName = 'All';
 
   addresses: Address[];
   addressBooks: string[];
@@ -34,7 +34,7 @@ export class AddressListComponent implements OnInit {
     });
   }
 
-  getAddresses() {
+  getAddresses() {   // get addresses for selected address book
     if (this.currentAddressBook === this.noAddressBookName) {
       return this.addresses;
     }
@@ -44,7 +44,7 @@ export class AddressListComponent implements OnInit {
     return addresses;
   }
 
-  changeGroups() {
+  changeGroups() {  //
     this.groups = [];
     _.each(_.groupBy(this.getAddresses(), 'group'), (value, key) => {
       this.groups.push(new Group(key, value));

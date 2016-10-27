@@ -1,7 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
 
 import { AddressListComponent } from './address-list.component';
 import { AddressBookSelectionBarComponent } from './addressBookSelectionBar/address-book-selection-bar.component';
@@ -13,8 +12,7 @@ import { MockDataService } from './mock-data.service';
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule,
-    RouterModule
+    HttpModule
   ],
   exports: [ AddressListComponent ],
   declarations: [
