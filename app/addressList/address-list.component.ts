@@ -28,7 +28,11 @@ export class AddressListComponent implements OnInit {
       this.addresses = res;
       this.addressBooks = _.chain(this.addresses)
         .map(person => person.addressBook).uniq().value();
-      this.addressBooks.unshift(this.noAddressBookName);
+      if (this.addressBooks.length > 1) {
+        this.addressBooks.unshift(this.noAddressBookName);
+      } else {
+        this.currentAddressBook = this.addressBooks[0];
+      }
 
       this.changeGroups();
     });
@@ -44,7 +48,7 @@ export class AddressListComponent implements OnInit {
     return addresses;
   }
 
-  changeGroups() {  //
+  changeGroups() {
     this.groups = [];
     _.each(_.groupBy(this.getAddresses(), 'group'), (value, key) => {
       this.groups.push(new Group(key, value));
@@ -66,6 +70,6 @@ export class AddressListComponent implements OnInit {
   }
 
   showSelectionBar() {
-    return this.addresses && this.addresses.length > 1;
+    return this.addresses && this.addressBooks.length > 1;
   }
 }
